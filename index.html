@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMS</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FIREBASE INITILIZATION -->
+    <div>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script src="myjs/f-config.js"></script>
+
+        <!-- FIREBASE AUTHINICATION SCRIPT -->
+        <script src="myjs/f-auth.js"></script>
+    </div>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color:#563d7c">
+        <img src="images/logo.png" width="40" height="34">
+        <a class="navbar-brand ml-1 mr-4" href="http://www.inspiredmemories.in">InspiredMemories</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">College Management System
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Features
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="signinbutton"></div>
+        <div id="usermail"></div>
+        <!-- <button type="button" class="btn btn-info my-2 my-sm-0 mr-4" onclick="document.location.href='login.html';">Log In / Sign Up</button> -->
+
+    </nav>
+
+    <div class="container mt-5">
+        <div id="sign-in-status"></div>
+        <div id="sign-in"></div>
+        <div id="account-details"></div>
+
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore, dolor consequatur eligendi, ea natus in voluptate
+            assumenda voluptates recusandae fugiat eveniet aliquam tempora eos. Consectetur impedit suscipit aliquam sint!</p>
+        <h1 style="margin-top:600px">This is cms-test</h1>
+
+    </div>
+
+    <!-- SCRIPT FILES LINKING -->
+    <div>
+
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login to CMS</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FIREBASE AND FIREBASE UI INITILIZATION -->
+    <div>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script src="myjs/f-config.js"></script>
+
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+        <script src="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth__en.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth.css" />
+
+        <script>
+            // FirebaseUI config.
+            var uiConfig = {
+                signInSuccessUrl: 'index.html',
+                signInOptions: [
+                    // Leave the lines as is for the providers you want to offer your users.
+                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                    firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+
+                ],
+                // Terms of service url.
+                tosUrl: 'tos.html',
+
+                //signInFlow:'popup'
+            };
+
+            // Initialize the FirebaseUI Widget using Firebase.
+            var ui = new firebaseui.auth.AuthUI(firebase.auth());
+            // The start method will wait until the DOM is loaded.
+            ui.start('#firebaseui-auth-container', uiConfig);
+        </script>
+    </div>
+</head>
+
+<body style="background-color:darkgrey">
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color:#563d7c">
+        <img src="images/logo.png" width="40" height="35">
+        <a class="navbar-brand ml-1 mr-4" href="http://www.inspiredmemories.in">InspiredMemories</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">College Management System
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Features
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+
+            <button type="disabled" class="btn btn-info my-2 my-sm-0 mr-4 disabled">Log In / Sign Up</button>
+        </div>
+
+    </nav>
+    <style>
+        #firebaseui-auth-container {
+            margin-top: 10%;
+        }
+    </style>
+    <div id="firebaseui-auth-container"></div>
+
+    <div>
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </div>
+</body>
+
+</html>
